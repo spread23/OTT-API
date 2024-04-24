@@ -16,7 +16,7 @@ const test = (req, res) => {
 const register = async (req, res) => {
     const params = req.body
 
-    if (!params.name || !params.email || !params.password || !params.nick) {
+    if (!params.name || !params.lastname || !params.email || !params.password || !params.nick) {
         return res.status(400).json({
             status: 'error',
             message: 'Faltan parametros'

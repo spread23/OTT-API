@@ -5,9 +5,33 @@ const EmployeeSchema = Schema({
         type: String,
         required: true
     },
+    lastname: {
+        type: String,
+        required: true
+    },
+    country: {
+        type: String,
+        default: 'Country'
+    },
+    city: {
+        type: String,
+        default: 'City'
+    },
+    talents: {
+        type: String,
+        default: 'Talents'
+    },
+    jobType: {
+        type: String,
+        default: 'Remoto'
+    },
     email: {
         type: String,
         required: true
+    },
+    experience: {
+        type: String,
+        default: 'Experience'
     },
     nick: {
         type: String,

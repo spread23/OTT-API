@@ -14,8 +14,12 @@ const validate = (params) => {
             
     let nick = !validator.isEmpty(params.nick) && 
                 validator.isLength(params.nick, {min: 4, max: 20})
+
+    let lastname = !validator.isEmpty(params.lastname) &&
+                    validator.isLength(params.lastname, {min: 5, max: undefined}) &&
+                    validator.isAlpha(params.lastname, 'es-ES')
     
-    if (!name || !email || !password || !nick) {
+    if (!name || !email || !password || !nick || !lastname) {
         throw new Error('No se ha superado la validacion de parametros')
     }
 
